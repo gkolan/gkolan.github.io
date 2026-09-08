@@ -1,0 +1,12 @@
+# Local tooling / editor config
+.claude/
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+._*
+
+# Logs and temp files
+*.log
+*.tmp

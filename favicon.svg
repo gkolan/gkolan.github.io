@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="8" fill="#0a0a0a"/>
+  <rect x="3.5" y="3.5" width="57" height="57" rx="6" fill="none" stroke="#333333" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="32" y="43" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="30" font-weight="700" fill="#ededed">GK</text>
+</svg>
