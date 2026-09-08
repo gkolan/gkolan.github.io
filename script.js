@@ -1,25 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('theme-toggle');
+    const themeOptions = document.querySelectorAll('.theme-option');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    let savedTheme;
+    try { savedTheme = localStorage.getItem('theme'); } catch (error) {}
+    let chosenTheme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : null;
 
     function applyTheme(useDarkTheme) {
-        document.body.classList.toggle('light-theme', !useDarkTheme);
-        themeToggle.textContent = useDarkTheme ? '☽' : '☼';
-        themeToggle.setAttribute('aria-label', useDarkTheme ? 'Switch to light theme' : 'Switch to dark theme');
-        themeToggle.title = useDarkTheme ? 'Switch to light theme' : 'Switch to dark theme';
+        document.documentElement.classList.toggle('light-theme', !useDarkTheme);
+        themeOptions.forEach((option) => {
+            option.setAttribute('aria-pressed', String(option.dataset.theme === (useDarkTheme ? 'dark' : 'light')));
+        });
     }
 
-    const savedTheme = localStorage.getItem('theme');
-    applyTheme(savedTheme ? savedTheme === 'dark' : prefersDark.matches);
+    applyTheme(chosenTheme ? chosenTheme === 'dark' : prefersDark.matches);
 
     prefersDark.addEventListener('change', (event) => {
-        if (!localStorage.getItem('theme')) applyTheme(event.matches);
+        if (!chosenTheme) applyTheme(event.matches);
     });
 
-    themeToggle.addEventListener('click', () => {
-        const useDarkTheme = document.body.classList.contains('light-theme');
-        applyTheme(useDarkTheme);
-        localStorage.setItem('theme', useDarkTheme ? 'dark' : 'light');
+    themeOptions.forEach((option) => {
+        option.addEventListener('click', () => {
+            chosenTheme = option.dataset.theme;
+            applyTheme(chosenTheme === 'dark');
+            try { localStorage.setItem('theme', chosenTheme); } catch (error) {}
+        });
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();

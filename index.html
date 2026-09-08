@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Gautam Kolan | Lead Salesforce Developer</title>
-    <meta name="description" content="Gautam Kolan is a Lead Salesforce Developer at Medidata Solutions, Inc. He builds open-source Salesforce tools: Apex Log Insights and Record Health Check.">
+    <meta name="description" content="Gautam Kolan is a Lead Salesforce Developer at Medidata Solutions, Inc. He builds open-source Salesforce tools: Apex Log Insights, Record Health Check, Bulk Record Upload, and Quote Document Totals.">
     <meta name="author" content="Gautam Kolan">
-    <meta name="keywords" content="Salesforce, Apex, Lightning Web Components, Salesforce metadata, Salesforce automation, Salesforce integrations, Salesforce security, data models, developer tooling, Salesforce architecture, Record Health Check, Apex Log Insights, Gautam Kolan">
+    <meta name="keywords" content="Salesforce, Apex, Lightning Web Components, Salesforce metadata, Salesforce automation, Salesforce integrations, Salesforce security, data models, developer tooling, Salesforce architecture, Record Health Check, Apex Log Insights, Bulk Record Upload, Quote Document Totals, Salesforce CPQ, Gautam Kolan">
     <link rel="canonical" href="https://gkolan.github.io/">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
@@ -18,26 +18,37 @@
     <meta property="og:site_name" content="Gautam Kolan">
     <meta property="og:url" content="https://gkolan.github.io/">
     <meta property="og:title" content="Gautam Kolan | Lead Salesforce Developer">
-    <meta property="og:description" content="Reusable frameworks and extensions for the Salesforce platform: Apex Log Insights, a free offline Apex debug log analyzer, and Record Health Check, a metadata-driven record data quality framework.">
+    <meta property="og:description" content="Open-source tools for the Salesforce platform: Apex Log Insights, a free offline Apex debug log analyzer, and Record Health Check, a metadata-driven data quality framework, plus Bulk Record Upload and Quote Document Totals, both in active development.">
     <meta property="og:image" content="https://gkolan.github.io/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Gautam Kolan, Lead Salesforce Developer. Open-source Salesforce tools: Apex Log Insights and Record Health Check.">
+    <meta property="og:image:alt" content="Gautam Kolan, Lead Salesforce Developer. Open-source Salesforce tools for the Salesforce platform.">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Gautam Kolan | Lead Salesforce Developer">
-    <meta name="twitter:description" content="Reusable frameworks and extensions for the Salesforce platform: Apex Log Insights, a free offline Apex debug log analyzer, and Record Health Check, a metadata-driven record data quality framework.">
+    <meta name="twitter:description" content="Open-source tools for the Salesforce platform: Apex Log Insights, a free offline Apex debug log analyzer, and Record Health Check, a metadata-driven data quality framework, plus Bulk Record Upload and Quote Document Totals, both in active development.">
     <meta name="twitter:image" content="https://gkolan.github.io/og-image.png">
-    <meta name="twitter:image:alt" content="Gautam Kolan, Lead Salesforce Developer. Open-source Salesforce tools: Apex Log Insights and Record Health Check.">
+    <meta name="twitter:image:alt" content="Gautam Kolan, Lead Salesforce Developer. Open-source Salesforce tools for the Salesforce platform.">
+
+    <!-- Set the theme before first paint so a light-theme visitor never sees a dark flash. -->
+    <script>
+        (function () {
+            var saved;
+            try { saved = localStorage.getItem('theme'); } catch (e) {}
+            var useDark = saved === 'dark' || (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            document.documentElement.classList.toggle('light-theme', !useDark);
+        })();
+    </script>
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="styles.css?v=20260907-3">
 
     <script type="application/ld+json">
     {
@@ -83,9 +94,8 @@
         {
           "@type": "SoftwareSourceCode",
           "name": "Apex Log Insights",
-          "description": "A free, offline toolkit that parses Salesforce Apex debug logs into five structured views: a triage verdict, a 20-phase execution timeline, SOQL and DML against governor limits, diagnostics including N+1 SOQL and recursive trigger detection, and a searchable raw log explorer with evidence linking. Parsing runs locally in a Web Worker. Distributed as a browser extension, CLI, npm library, and MCP server.",
+          "description": "A free toolkit that parses Salesforce Apex debug logs into structured analysis: a 20-phase DML lifecycle with governor limit burn rates, SOQL and DML detail with N+1 loop detection, callout tracking, CPU attribution by class, trigger cascade and recursion warnings, and evidence linking back to the raw log line. Parsing runs locally and log data never leaves the machine. Distributed as browser extensions for Chrome, Edge and Firefox, a CLI, an npm library, and an MCP server.",
           "codeRepository": "https://github.com/gkolan/apex-log-insights",
-          "softwareVersion": "1.2.0",
           "programmingLanguage": ["TypeScript", "JavaScript"],
           "runtimePlatform": "Salesforce",
           "author": { "@id": "https://gkolan.github.io/#gautam" },
@@ -94,9 +104,8 @@
         {
           "@type": "SoftwareSourceCode",
           "name": "Record Health Check",
-          "description": "A metadata-driven Salesforce framework that evaluates record data quality and shows users read-only guidance on what needs attention, why it matters, and how to resolve it, without blocking saves.",
-          "codeRepository": "https://github.com/gkolan/RecordHealthCheck",
-          "softwareVersion": "2.0.7",
+          "description": "An open-source Salesforce framework that works like a coach on the record page. Check Sets and Checks defined in Custom Metadata evaluate the record, its related records and aggregates, then explain what was found, what was expected, why it matters and how to resolve it. It never changes data and never blocks a save. Distributed as a namespaced 2GP unlocked package.",
+          "codeRepository": "https://github.com/gkolan/record-health-check",
           "programmingLanguage": ["Apex", "JavaScript"],
           "runtimePlatform": "Salesforce",
           "author": { "@id": "https://gkolan.github.io/#gautam" },
@@ -105,7 +114,7 @@
         {
           "@type": "SoftwareSourceCode",
           "name": "Bulk Record Upload",
-          "description": "Configurable CSV uploads inside Salesforce Lightning, with reusable admin-defined upload processes, permission enforcement in Apex, background processing, and row-level results. Built with Apex and Lightning Web Components. In active development.",
+          "description": "CSV uploads inside Salesforce Lightning. Admins configure an upload process and each of its columns in Custom Metadata. Merge behavior is type aware: text appends or prepends, numbers add or subtract, dates keep the later or earlier value, multi-select picklists add or remove selections, checkboxes combine, and lookups match by name, with blank handling, defaults and validation per column. Apex respects the running user\u2019s object and field permissions, processes rows in the background, and returns a result for every row. Built with Apex and Lightning Web Components. In active development.",
           "codeRepository": "https://github.com/gkolan/bulk-record-upload",
           "programmingLanguage": ["Apex", "JavaScript"],
           "runtimePlatform": "Salesforce",
@@ -115,7 +124,7 @@
         {
           "@type": "SoftwareSourceCode",
           "name": "Quote Document Totals",
-          "description": "Configurable document tables for Salesforce CPQ. Groups quote lines, validates totals, and saves checked summaries for reports and document tools. Built with Apex, Flow, and Custom Metadata. In active development.",
+          "description": "Document tables for Salesforce CPQ. Groups Quote Lines, checks the totals against the lines, and saves the summaries for reports and document tools. Built with Apex, Flow, and custom metadata. In active development.",
           "codeRepository": "https://github.com/gkolan/quote-document-totals",
           "programmingLanguage": ["Apex", "JavaScript"],
           "runtimePlatform": "Salesforce",
@@ -127,9 +136,15 @@
     </script>
 </head>
 <body>
-    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme">☽</button>
-
     <main class="container">
+        <div class="theme-picker" role="group" aria-label="Color theme">
+            <button class="theme-option" type="button" data-theme="light" aria-label="Light theme" title="Light theme" aria-pressed="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+            </button>
+            <button class="theme-option" type="button" data-theme="dark" aria-label="Dark theme" title="Dark theme" aria-pressed="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"/></svg>
+            </button>
+        </div>
         <header class="hero">
             <h1 class="hero-title">Hi! I am Gautam.</h1>
             <div class="hero-intro">
@@ -151,11 +166,11 @@
                 <article class="simple-card">
                     <div class="card-topline">
                         <span class="project-number">01</span>
-                        <span class="project-type">Browser extension</span>
+                        <span class="project-type">Developer tooling</span>
                     </div>
                     <h3>Apex Log Insights</h3>
-                    <p class="card-desc">A free, offline toolkit for Apex debug logs. Drop in a .log file and get five structured views: a triage verdict, the 20-phase execution timeline, SOQL and DML against governor limits, diagnostics, and a searchable raw log. Every finding links back to its exact line.</p>
-                    <p class="card-status card-status--stable"><span class="status-dot" aria-hidden="true"></span>Stable release &middot; v1.2.0</p>
+                    <p class="card-desc">Find bottlenecks in Salesforce Apex debug logs with an execution timeline, governor limit analysis, and query diagnostics. Findings link directly to the raw log. Parsing runs locally, keeping your logs on your machine.</p>
+                    <p class="card-status card-status--stable"><span class="status-dot" aria-hidden="true"></span><span>Stable release</span></p>
                     <a class="card-link" href="https://github.com/gkolan/apex-log-insights" target="_blank" rel="noopener noreferrer" aria-label="View Apex Log Insights on GitHub">View on GitHub <span aria-hidden="true">↗</span></a>
                 </article>
 
@@ -165,9 +180,9 @@
                         <span class="project-type">Salesforce framework</span>
                     </div>
                     <h3>Record Health Check</h3>
-                    <p class="card-desc">A metadata-driven framework for record data quality. Admins define check sets and rules in custom metadata, and the card acts like a coach on the record page, showing users what needs attention, why it matters, and how to resolve it.</p>
-                    <p class="card-status card-status--stable"><span class="status-dot" aria-hidden="true"></span>Stable release &middot; v2.0.7</p>
-                    <a class="card-link" href="https://github.com/gkolan/RecordHealthCheck" target="_blank" rel="noopener noreferrer" aria-label="View Record Health Check on GitHub">View on GitHub <span aria-hidden="true">↗</span></a>
+                    <p class="card-desc">Help users understand what needs attention on a Salesforce record and how to resolve it. Admins define checks in Custom Metadata for record fields, related records, and aggregates. The framework never changes data or blocks a save.</p>
+                    <p class="card-status card-status--stable"><span class="status-dot" aria-hidden="true"></span><span>Stable release</span></p>
+                    <a class="card-link" href="https://github.com/gkolan/record-health-check" target="_blank" rel="noopener noreferrer" aria-label="View Record Health Check on GitHub">View on GitHub <span aria-hidden="true">↗</span></a>
                 </article>
 
                 <article class="simple-card">
@@ -176,8 +191,8 @@
                         <span class="project-type">Salesforce app</span>
                     </div>
                     <h3>Bulk Record Upload</h3>
-                    <p class="card-desc">Configurable CSV uploads inside Lightning. An admin defines an upload process once — object, operation, allowed columns, matching rules — and users work from its template. Apex enforces the user’s own permissions, processes rows in the background, and reports the outcome of every row.</p>
-                    <p class="card-status"><span class="status-dot" aria-hidden="true"></span>In active development</p>
+                    <p class="card-desc">Upload CSV records inside Salesforce Lightning using reusable, admin-defined processes. Custom Metadata controls field mappings and merge behavior. Background processing respects each user's permissions and returns a result for every row.</p>
+                    <p class="card-status"><span class="status-dot" aria-hidden="true"></span><span>In active development</span></p>
                     <a class="card-link" href="https://github.com/gkolan/bulk-record-upload" target="_blank" rel="noopener noreferrer" aria-label="View Bulk Record Upload on GitHub">View on GitHub <span aria-hidden="true">↗</span></a>
                 </article>
 
@@ -187,8 +202,8 @@
                         <span class="project-type">Salesforce CPQ</span>
                     </div>
                     <h3>Quote Document Totals</h3>
-                    <p class="card-desc">Configurable document tables for Salesforce CPQ. Custom metadata defines how quote lines are filtered, grouped, and labelled; Apex builds the summary, validates the totals, and saves it for reports and document tools, so each template stops re-implementing the same rules.</p>
-                    <p class="card-status"><span class="status-dot" aria-hidden="true"></span>In active development</p>
+                    <p class="card-desc">Build consistent Salesforce CPQ quote summaries for reports and document tools. Custom Metadata controls grouping and labels, while Apex validates totals before saving. Optional products stay out of the payable total.</p>
+                    <p class="card-status"><span class="status-dot" aria-hidden="true"></span><span>In active development</span></p>
                     <a class="card-link" href="https://github.com/gkolan/quote-document-totals" target="_blank" rel="noopener noreferrer" aria-label="View Quote Document Totals on GitHub">View on GitHub <span aria-hidden="true">↗</span></a>
                 </article>
             </div>
@@ -202,6 +217,6 @@
             </span>
         </footer>
     </main>
-    <script src="script.js"></script>
+    <script src="script.js?v=20260907"></script>
 </body>
 </html>
