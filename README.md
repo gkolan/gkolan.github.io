@@ -1,10 +1,10 @@
-# Gautam Kolan’s portfolio
+# Gautam Kolan’s personal website
 
 I’m Gautam, a Lead Salesforce Developer at Medidata Solutions, Inc. I enjoy understanding how platforms work and extending their capabilities through reusable frameworks and custom solutions.
 
-This repository contains my personal portfolio, with tools for the Salesforce platform, TypeScript utilities, and web apps I’ve designed and built for everyday work.
+This repository contains my personal website, with tools for the Salesforce platform, TypeScript utilities, and web apps I’ve designed and built for everyday work.
 
-**[Visit my portfolio →](https://gkolan.github.io/)**
+**[Visit my website →](https://gkolan.github.io/)**
 
 Explore the projects for source code, demos, and setup guides, or [connect with me on LinkedIn](https://www.linkedin.com/in/gautamkolan) to say hello or share feedback.
 
