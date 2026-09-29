@@ -4,7 +4,6 @@
     --text-main: #ededed;
     --text-muted: #929292;
     --border: #333333;
-    --card-bg: #111111;
     --card-hover: #171717;
 }
 
@@ -15,7 +14,6 @@ html.light-theme {
     --text-main: #171717;
     --text-muted: #666666;
     --border: #dedede;
-    --card-bg: #fafafa;
     --card-hover: #f4f4f4;
 }
 
@@ -23,6 +21,10 @@ html.light-theme {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+[hidden] {
+    display: none !important;
 }
 
 html {
@@ -57,6 +59,7 @@ button:focus-visible {
 .container {
     width: 100%;
     max-width: 1400px;
+    margin-inline: auto;
     min-height: 100vh;
     min-height: 100dvh;
     padding: 1.75rem 8vw 2rem;
@@ -136,8 +139,15 @@ html.light-theme .theme-option[data-theme="light"] {
     margin-top: 1rem;
 }
 
+.hero-links,
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.5rem;
+}
+
 .text-link,
-.card-link,
 footer a {
     width: fit-content;
     color: var(--text-main);
@@ -148,15 +158,14 @@ footer a {
 
 .text-link:hover,
 .text-link:focus-visible,
-.card-link:hover,
-.card-link:focus-visible,
 footer a:hover,
 footer a:focus-visible {
     border-color: var(--text-main);
 }
 
-.projects {
+.project-directory {
     margin-bottom: 4rem;
+    scroll-margin-top: 2rem;
 }
 
 .section-heading {
@@ -171,128 +180,140 @@ footer a:focus-visible {
 
 .section-title {
     color: var(--text-main);
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
 }
 
-.section-heading p {
+.section-heading a {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem;
-}
-
-.simple-card {
-    position: relative;
-    min-width: 0;
-    min-height: 0;
-    overflow-wrap: anywhere;
-    padding: 2.25rem;
+.tech-list {
     display: flex;
-    flex-direction: column;
-    background: var(--card-bg);
-    border: 1px dashed var(--border);
-    border-radius: 4px;
-    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 0.4rem;
+    list-style: none;
+    font-size: 0.78rem;
+    line-height: 1.5;
 }
 
-.simple-card:hover,
-.simple-card:focus-within {
-    background: var(--card-hover);
-    border-color: var(--text-main);
-    transform: translateY(-4px);
+.tech-list li {
+    padding: 0.2rem 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    color: var(--text-main);
 }
 
-.simple-card .card-link::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 4px;
+.directory-intro {
+    max-width: 68ch;
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
 }
 
-.simple-card:hover .card-link {
-    border-color: var(--text-main);
-}
-
-.card-topline {
+.directory-toolbar {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    margin-bottom: 2rem;
-    color: var(--text-muted);
-    font-size: 0.78rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    margin-bottom: 1.25rem;
 }
 
-.project-number::before {
-    content: "[";
-}
-
-.project-number::after {
-    content: "]";
-}
-
-.simple-card h3 {
-    margin-bottom: 1rem;
-    color: var(--text-main);
-    font-size: clamp(1.35rem, 2vw, 1.65rem);
-    line-height: 1.25;
-}
-
-.card-desc {
-    max-width: 52ch;
-    margin-bottom: 1.75rem;
-    color: var(--text-muted);
-    font-size: 0.98rem;
-    flex-grow: 1;
-}
-
-.card-status {
+.project-filters {
     display: flex;
-    /* Baseline, not centre: the label is all capitals, which sit high in the em
-       box, so a vertically centred dot reads as sitting below the text. */
-    align-items: baseline;
+    flex-wrap: wrap;
     gap: 0.5rem;
-    line-height: 1.4;
-    margin-bottom: 1rem;
-    color: var(--text-muted);
-    font-size: 0.78rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
 }
 
-.card-status > span:last-child {
+.filter-button {
+    min-height: 44px;
+    padding: 0.5rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--text-muted);
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.filter-button:hover {
+    border-color: var(--text-main);
+    color: var(--text-main);
+}
+
+.filter-button[aria-pressed="true"] {
+    border-color: var(--text-main);
+    background: var(--text-main);
+    color: var(--bg-main);
+}
+
+.project-count {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.project-list {
+    list-style: none;
+    border-top: 1px solid var(--border);
+}
+
+.project-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(12rem, 0.4fr);
+    align-items: start;
+    gap: 2rem 4rem;
+    padding: 2.5rem 0;
+}
+
+/* Separate visible projects without adding a trailing rule after filtered lists. */
+.project-row:not([hidden]) ~ .project-row:not([hidden]) {
+    border-top: 1px solid var(--border);
+}
+
+.project-summary {
     min-width: 0;
+}
+
+.project-summary h3 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    line-height: 1.3;
     overflow-wrap: anywhere;
 }
 
-.status-dot {
-    /* Fixed size: the dot must not be squeezed if the label runs long. */
-    flex: 0 0 auto;
-    /* An empty box baselines on its bottom edge, which puts the dot's centre
-       level with the middle of the capitals. */
-    align-self: baseline;
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    border: 1px solid currentColor;
+.project-summary p {
+    max-width: 66ch;
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.75;
 }
 
-.card-status--stable {
+.project-links {
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    min-width: 0;
+    padding-top: 0.25rem;
+}
+
+.project-type {
     color: var(--text-main);
+    font-size: 0.9rem;
 }
 
-.card-status--stable .status-dot {
-    background: currentColor;
+.project-availability {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.6;
 }
 
 footer {
@@ -301,7 +322,6 @@ footer {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    border-top: 1px dashed var(--border);
     color: var(--text-muted);
     font-size: 0.9rem;
 }
@@ -322,7 +342,7 @@ footer a {
     }
 
     .hero,
-    .projects {
+    .project-directory {
         margin-bottom: 3rem;
     }
 
@@ -332,16 +352,19 @@ footer a {
         gap: 0.25rem;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
+    .project-row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.25rem;
+        padding-block: 2rem;
     }
 
-    .simple-card {
-        padding: 1.75rem;
+    .project-details {
+        gap: 0.75rem;
+        padding-top: 0;
     }
 
-    .card-topline {
-        margin-bottom: 1.75rem;
+    footer {
+        flex-wrap: wrap;
     }
 }
 

@@ -2,6 +2,7 @@
 .claude/
 .vscode/
 .idea/
+.playwright-mcp/
 
 # macOS
 .DS_Store

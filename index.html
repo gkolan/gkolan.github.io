@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Gautam Kolan | Lead Salesforce Developer</title>
-    <meta name="description" content="Gautam Kolan is a Lead Salesforce Developer at Medidata Solutions, Inc. He builds open-source Salesforce tools: Apex Log Insights, Record Health Check, Bulk Record Upload, and Quote Document Totals.">
+    <title>Gautam Kolan | Developer Portfolio</title>
+    <meta name="description" content="Explore Gautam Kolan’s Salesforce frameworks, TypeScript developer tools, and web apps, including Record Health Check, Apex Log Insights, Prompt Context Builder, and PickNext.">
     <meta name="author" content="Gautam Kolan">
-    <meta name="keywords" content="Salesforce, Apex, Lightning Web Components, Salesforce metadata, Salesforce automation, Salesforce integrations, Salesforce security, data models, developer tooling, Salesforce architecture, Record Health Check, Apex Log Insights, Bulk Record Upload, Quote Document Totals, Salesforce CPQ, Gautam Kolan">
+    <meta name="keywords" content="Gautam Kolan, developer portfolio, Salesforce, TypeScript, JavaScript, React, Next.js, Apex, Lightning Web Components, developer tooling, Record Health Check, Apex Log Insights, Prompt Context Builder, FocusGrid, PickNext">
     <link rel="canonical" href="https://gkolan.github.io/">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
@@ -17,20 +17,20 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Gautam Kolan">
     <meta property="og:url" content="https://gkolan.github.io/">
-    <meta property="og:title" content="Gautam Kolan | Lead Salesforce Developer">
-    <meta property="og:description" content="Open-source tools for the Salesforce platform: Apex Log Insights, a free offline Apex debug log analyzer, and Record Health Check, a metadata-driven data quality framework, plus Bulk Record Upload and Quote Document Totals, both in active development.">
+    <meta property="og:title" content="Gautam Kolan | Developer Portfolio">
+    <meta property="og:description" content="Salesforce frameworks, TypeScript developer tools, and web apps. Explore Record Health Check, Apex Log Insights, Prompt Context Builder, PickNext, and more.">
     <meta property="og:image" content="https://gkolan.github.io/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Gautam Kolan, Lead Salesforce Developer. Open-source Salesforce tools for the Salesforce platform.">
+    <meta property="og:image:alt" content="Gautam Kolan, Lead Salesforce Developer, with Apex Log Insights and Record Health Check.">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Gautam Kolan | Lead Salesforce Developer">
-    <meta name="twitter:description" content="Open-source tools for the Salesforce platform: Apex Log Insights, a free offline Apex debug log analyzer, and Record Health Check, a metadata-driven data quality framework, plus Bulk Record Upload and Quote Document Totals, both in active development.">
+    <meta name="twitter:title" content="Gautam Kolan | Developer Portfolio">
+    <meta name="twitter:description" content="Salesforce frameworks, TypeScript developer tools, and web apps. Explore Record Health Check, Apex Log Insights, Prompt Context Builder, PickNext, and more.">
     <meta name="twitter:image" content="https://gkolan.github.io/og-image.png">
-    <meta name="twitter:image:alt" content="Gautam Kolan, Lead Salesforce Developer. Open-source Salesforce tools for the Salesforce platform.">
+    <meta name="twitter:image:alt" content="Gautam Kolan, Lead Salesforce Developer, with Apex Log Insights and Record Health Check.">
 
     <!-- Set the theme before first paint so a light-theme visitor never sees a dark flash. -->
     <script>
@@ -48,7 +48,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap">
-    <link rel="stylesheet" href="styles.css?v=20260907-3">
+    <link rel="stylesheet" href="styles.css?v=20260929-3">
+
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-pZhEjbyIaDLGEo-8x4xa6.js"></script>
+    <script>
+        window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+        plausible.init()
+    </script>
 
     <script type="application/ld+json">
     {
@@ -64,12 +71,16 @@
             "@type": "Organization",
             "name": "Medidata Solutions, Inc."
           },
-          "description": "Lead Salesforce Developer focused on Salesforce architecture, application development, developer productivity, and open-source tooling for developers and administrators.",
+          "description": "Lead Salesforce Developer building Salesforce frameworks, TypeScript developer tools, and web apps.",
           "knowsAbout": [
             "Salesforce",
             "Salesforce architecture",
             "Apex",
             "Lightning Web Components",
+            "TypeScript",
+            "JavaScript",
+            "React",
+            "Next.js",
             "Salesforce metadata",
             "Salesforce automation",
             "Salesforce integrations",
@@ -94,7 +105,7 @@
         {
           "@type": "SoftwareSourceCode",
           "name": "Apex Log Insights",
-          "description": "A free toolkit that parses Salesforce Apex debug logs into structured analysis: a 20-phase DML lifecycle with governor limit burn rates, SOQL and DML detail with N+1 loop detection, callout tracking, CPU attribution by class, trigger cascade and recursion warnings, and evidence linking back to the raw log line. Parsing runs locally and log data never leaves the machine. Distributed as browser extensions for Chrome, Edge and Firefox, a CLI, an npm library, and an MCP server.",
+          "description": "A TypeScript toolkit for local Salesforce Apex debug-log analysis with execution traces, query diagnostics, governor limits, and evidence-linked reports. Available as browser and VS Code extensions, with a CLI, core library, and MCP server available through source builds.",
           "codeRepository": "https://github.com/gkolan/apex-log-insights",
           "programmingLanguage": ["TypeScript", "JavaScript"],
           "runtimePlatform": "Salesforce",
@@ -106,6 +117,47 @@
           "name": "Record Health Check",
           "description": "An open-source Salesforce framework that works like a coach on the record page. Check Sets and Checks defined in Custom Metadata evaluate the record, its related records and aggregates, then explain what was found, what was expected, why it matters and how to resolve it. It never changes data and never blocks a save. Distributed as a namespaced 2GP unlocked package.",
           "codeRepository": "https://github.com/gkolan/record-health-check",
+          "programmingLanguage": ["Apex", "JavaScript"],
+          "runtimePlatform": "Salesforce",
+          "author": { "@id": "https://gkolan.github.io/#gautam" },
+          "isPartOf": { "@id": "https://gkolan.github.io/#website" }
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "FocusGrid",
+          "description": "A task manager where position is priority. Tasks sit on an urgency and importance field; Focus recommends what to do next and explains why. Built with TypeScript, React, and Next.js, with tasks stored in the browser.",
+          "codeRepository": "https://github.com/gkolan/focus-grid",
+          "programmingLanguage": "TypeScript",
+          "runtimePlatform": "Web browser",
+          "author": { "@id": "https://gkolan.github.io/#gautam" },
+          "isPartOf": { "@id": "https://gkolan.github.io/#website" }
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "PickNext",
+          "description": "Fair team picking for standups, raffles, icebreakers, and hot-seat questions. A JavaScript web app with timed turns and session recaps, with no account required.",
+          "codeRepository": "https://github.com/gkolan/pick-next",
+          "url": "https://picknext.io",
+          "programmingLanguage": "JavaScript",
+          "runtimePlatform": "Web browser",
+          "author": { "@id": "https://gkolan.github.io/#gautam" },
+          "isPartOf": { "@id": "https://gkolan.github.io/#website" }
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "Prompt Context Builder",
+          "description": "Build reviewable prompt context from Salesforce records using reusable templates and permission-aware data access, without calling an AI model. In active development.",
+          "codeRepository": "https://github.com/gkolan/prompt-context-builder",
+          "programmingLanguage": ["Apex", "JavaScript"],
+          "runtimePlatform": "Salesforce",
+          "author": { "@id": "https://gkolan.github.io/#gautam" },
+          "isPartOf": { "@id": "https://gkolan.github.io/#website" }
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "Record Health Check Extensions",
+          "description": "Optional Salesforce extensions for Record Health Check, including scheduling, alerts, reporting, remediation, and integrations. In active development.",
+          "codeRepository": "https://github.com/gkolan/record-health-check-extensions",
           "programmingLanguage": ["Apex", "JavaScript"],
           "runtimePlatform": "Salesforce",
           "author": { "@id": "https://gkolan.github.io/#gautam" },
@@ -146,67 +198,152 @@
             </button>
         </div>
         <header class="hero">
-            <h1 class="hero-title">Hi! I am Gautam.</h1>
+            <h1 class="hero-title">Hi, I’m Gautam.</h1>
             <div class="hero-intro">
-                <p>Lead Salesforce Developer at Medidata Solutions, Inc.</p>
-                <p>I enjoy understanding how the different parts of a platform work together and finding ways to extend its capabilities through reusable frameworks and custom solutions.</p>
-                <p>Take a look at the projects below. Reach out, say&nbsp;hello, or&nbsp;share any feedback!</p>
+                <p>I’m a Lead Salesforce Developer at Medidata Solutions, Inc.</p>
+                <p>I build Salesforce frameworks, TypeScript developer tools, and web apps for everyday work.</p>
+                <p>I enjoy figuring out how a platform works and finding ways to extend it.</p>
             </div>
 
-            <a class="text-link" href="https://www.linkedin.com/in/gautamkolan" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+            <div class="hero-links">
+                <a class="text-link" href="https://www.linkedin.com/in/gautamkolan" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+            </div>
         </header>
 
-        <section class="projects" aria-labelledby="projects-title">
+        <section class="project-directory" id="all-projects" aria-labelledby="directory-title">
             <div class="section-heading">
-                <h2 id="projects-title" class="section-title">Selected projects</h2>
-                <p>Open-source tools I’ve designed and built.</p>
+                <h2 id="directory-title" class="section-title">Projects</h2>
+                <a class="text-link" href="https://github.com/gkolan?tab=repositories" target="_blank" rel="noopener noreferrer">Browse GitHub <span aria-hidden="true">↗</span></a>
             </div>
-
-            <div class="projects-grid">
-                <article class="simple-card">
-                    <div class="card-topline">
-                        <span class="project-number">01</span>
-                        <span class="project-type">Developer tooling</span>
-                    </div>
-                    <h3>Apex Log Insights</h3>
-                    <p class="card-desc">Find bottlenecks in Salesforce Apex debug logs with an execution timeline, governor limit analysis, and query diagnostics. Findings link directly to the raw log. Parsing runs locally, keeping your logs on your machine.</p>
-                    <p class="card-status card-status--stable"><span class="status-dot" aria-hidden="true"></span><span>Stable release</span></p>
-                    <a class="card-link" href="https://github.com/gkolan/apex-log-insights" target="_blank" rel="noopener noreferrer" aria-label="View Apex Log Insights on GitHub">View on GitHub <span aria-hidden="true">↗</span></a>
-                </article>
-
-                <article class="simple-card">
-                    <div class="card-topline">
-                        <span class="project-number">02</span>
-                        <span class="project-type">Salesforce framework</span>
-                    </div>
-                    <h3>Record Health Check</h3>
-                    <p class="card-desc">Help users understand what needs attention on a Salesforce record and how to resolve it. Admins define checks in Custom Metadata for record fields, related records, and aggregates. The framework never changes data or blocks a save.</p>
-                    <p class="card-status card-status--stable"><span class="status-dot" aria-hidden="true"></span><span>Stable release</span></p>
-                    <a class="card-link" href="https://github.com/gkolan/record-health-check" target="_blank" rel="noopener noreferrer" aria-label="View Record Health Check on GitHub">View on GitHub <span aria-hidden="true">↗</span></a>
-                </article>
-
-                <article class="simple-card">
-                    <div class="card-topline">
-                        <span class="project-number">03</span>
-                        <span class="project-type">Salesforce app</span>
-                    </div>
-                    <h3>Bulk Record Upload</h3>
-                    <p class="card-desc">Upload CSV records inside Salesforce Lightning using reusable, admin-defined processes. Custom Metadata controls field mappings and merge behavior. Background processing respects each user's permissions and returns a result for every row.</p>
-                    <p class="card-status"><span class="status-dot" aria-hidden="true"></span><span>In active development</span></p>
-                    <a class="card-link" href="https://github.com/gkolan/bulk-record-upload" target="_blank" rel="noopener noreferrer" aria-label="View Bulk Record Upload on GitHub">View on GitHub <span aria-hidden="true">↗</span></a>
-                </article>
-
-                <article class="simple-card">
-                    <div class="card-topline">
-                        <span class="project-number">04</span>
-                        <span class="project-type">Salesforce CPQ</span>
-                    </div>
-                    <h3>Quote Document Totals</h3>
-                    <p class="card-desc">Build consistent Salesforce CPQ quote summaries for reports and document tools. Custom Metadata controls grouping and labels, while Apex validates totals before saving. Optional products stay out of the payable total.</p>
-                    <p class="card-status"><span class="status-dot" aria-hidden="true"></span><span>In active development</span></p>
-                    <a class="card-link" href="https://github.com/gkolan/quote-document-totals" target="_blank" rel="noopener noreferrer" aria-label="View Quote Document Totals on GitHub">View on GitHub <span aria-hidden="true">↗</span></a>
-                </article>
+            <p class="directory-intro">Projects I’ve designed and built, with source code and links to demos or setup guides.</p>
+            <div class="directory-toolbar" hidden>
+                <div class="project-filters" role="group" aria-label="Filter projects">
+                    <button class="filter-button" type="button" data-filter="all" aria-pressed="true" aria-controls="project-list">All</button>
+                    <button class="filter-button" type="button" data-filter="salesforce" aria-pressed="false" aria-controls="project-list">Salesforce</button>
+                    <button class="filter-button" type="button" data-filter="typescript" aria-pressed="false" aria-controls="project-list">TypeScript</button>
+                    <button class="filter-button" type="button" data-filter="web" aria-pressed="false" aria-controls="project-list">Web apps</button>
+                </div>
+                <p class="project-count" role="status" aria-live="polite" aria-atomic="true"></p>
             </div>
+            <ul class="project-list" id="project-list">
+                <li class="project-row" data-categories="salesforce">
+                    <div class="project-summary">
+                        <h3>Record Health Check</h3>
+                        <p>See whether a Salesforce record is ready for the next step and what needs attention. Admins define checks in Custom Metadata for fields, related records, and aggregates. Results explain what was found, what was expected, and how to resolve issues. Checks don’t change data or block saves. Optional extensions for scheduling, alerts, and reporting are in development.</p>
+                        <div class="project-links">
+                            <a class="text-link" href="https://github.com/gkolan/record-health-check/blob/main/docs/install/install-in-a-sandbox.md" target="_blank" rel="noopener noreferrer" aria-label="Read the Record Health Check installation guide">Installation guide <span aria-hidden="true">↗</span></a>
+                            <a class="text-link" href="https://github.com/gkolan/record-health-check" target="_blank" rel="noopener noreferrer" aria-label="View Record Health Check on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <p class="project-type">Salesforce framework</p>
+                        <ul class="tech-list" aria-label="Technologies"><li>Apex</li><li>LWC</li><li>Custom Metadata</li></ul>
+                        <p class="project-availability">2GP Unlocked Package Release</p>
+                    </div>
+                </li>
+                <li class="project-row" data-categories="salesforce">
+                    <div class="project-summary">
+                        <h3>Record Health Check Extensions</h3>
+                        <p>Add scheduling, guided check building, alerts, reporting, and integrations to Record Health Check. Extensions can also run approved corrective Flows. Each depends on the core framework and can be adopted separately, so admins can choose what they need. The suite is in active development; each extension’s documentation explains its current availability.</p>
+                        <div class="project-links">
+                            <a class="text-link" href="https://github.com/gkolan/record-health-check-extensions" target="_blank" rel="noopener noreferrer" aria-label="View Record Health Check Extensions on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <p class="project-type">Salesforce extensions</p>
+                        <ul class="tech-list" aria-label="Technologies"><li>Apex</li><li>LWC</li><li>Flow</li></ul>
+                        <p class="project-availability">In active development</p>
+                    </div>
+                </li>
+                <li class="project-row" data-categories="salesforce">
+                    <div class="project-summary">
+                        <h3>Prompt Context Builder</h3>
+                        <p>Generate editable prompts from Salesforce records using reusable templates that admins control. Admins choose which fields and related data a template can read, then publish a fixed version. Users can review, edit, and copy the result from a record page. The app checks Salesforce permissions throughout; it does not call an AI model or update customer records.</p>
+                        <div class="project-links">
+                            <a class="text-link" href="https://github.com/gkolan/prompt-context-builder#try-the-prepared-demo" target="_blank" rel="noopener noreferrer" aria-label="See how to set up the Prompt Context Builder demo">Demo setup <span aria-hidden="true">↗</span></a>
+                            <a class="text-link" href="https://github.com/gkolan/prompt-context-builder" target="_blank" rel="noopener noreferrer" aria-label="View Prompt Context Builder on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <p class="project-type">Salesforce app</p>
+                        <ul class="tech-list" aria-label="Technologies"><li>Apex</li><li>LWC</li><li>Flow</li></ul>
+                        <p class="project-availability">In active development</p>
+                    </div>
+                </li>
+                <li class="project-row" data-categories="web">
+                    <div class="project-summary">
+                        <h3>PickNext</h3>
+                        <p>PickNext chooses who goes next in standups, raffles, icebreakers, and hot-seat sessions. Fair random picks, timed turns, and session recaps help you run each round. You can save teams in your browser, mark someone out for the day, and use presenter mode on a shared screen. Try the demo team without creating an account or installing anything.</p>
+                        <div class="project-links">
+                            <a class="text-link" href="https://picknext.io" target="_blank" rel="noopener noreferrer" aria-label="Try PickNext in your browser">Try PickNext <span aria-hidden="true">↗</span></a>
+                            <a class="text-link" href="https://github.com/gkolan/pick-next" target="_blank" rel="noopener noreferrer" aria-label="View PickNext on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <p class="project-type">Team collaboration app</p>
+                        <ul class="tech-list" aria-label="Technologies"><li>JavaScript</li><li>Vite</li><li>GSAP</li></ul>
+                        <p class="project-availability">Live web app</p>
+                    </div>
+                </li>
+                <li class="project-row" data-categories="salesforce typescript">
+                    <div class="project-summary">
+                        <h3>Apex Log Insights</h3>
+                        <p>Read Salesforce Apex debug logs as an execution timeline with query diagnostics and governor limit analysis. Findings link to the relevant log lines, so you can trace bottlenecks and errors back to their source. Parsing runs locally, and logs stay on your machine. Use a browser or VS Code extension, or build the CLI, library, and MCP server from source.</p>
+                        <div class="project-links">
+                            <a class="text-link" href="https://github.com/gkolan/apex-log-insights/blob/main/docs/user-guides/getting-started.md" target="_blank" rel="noopener noreferrer" aria-label="Read the Apex Log Insights setup guide">Setup guide <span aria-hidden="true">↗</span></a>
+                            <a class="text-link" href="https://github.com/gkolan/apex-log-insights" target="_blank" rel="noopener noreferrer" aria-label="View Apex Log Insights on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <p class="project-type">Developer tooling</p>
+                        <ul class="tech-list" aria-label="Technologies"><li>TypeScript</li><li>JavaScript</li><li>MCP</li></ul>
+                        <p class="project-availability">Browser &amp; VS Code extensions</p>
+                    </div>
+                </li>
+                <li class="project-row" data-categories="salesforce">
+                    <div class="project-summary">
+                        <h3>Quote Document Totals</h3>
+                        <p>Group Salesforce CPQ quote lines into summaries for reports and document tools. Admins control grouping and labels through Custom Metadata. Before saving, Apex checks the totals against the underlying lines and excludes optional products from the payable total. Reports and generated documents can then use the same saved figures.</p>
+                        <div class="project-links">
+                            <a class="text-link" href="https://github.com/gkolan/quote-document-totals" target="_blank" rel="noopener noreferrer" aria-label="View Quote Document Totals on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <p class="project-type">Salesforce CPQ</p>
+                        <ul class="tech-list" aria-label="Technologies"><li>Apex</li><li>Flow</li><li>Custom Metadata</li></ul>
+                        <p class="project-availability">In active development</p>
+                    </div>
+                </li>
+                <li class="project-row" data-categories="salesforce">
+                    <div class="project-summary">
+                        <h3>Bulk Record Upload</h3>
+                        <p>Let users upload CSV records directly in Salesforce Lightning. Admins define reusable upload processes in Custom Metadata, including field mappings, defaults, validation, and merge rules for different field types. Records are processed in the background using the running user’s object and field permissions. A result for each row helps users find and correct failures.</p>
+                        <div class="project-links">
+                            <a class="text-link" href="https://github.com/gkolan/bulk-record-upload" target="_blank" rel="noopener noreferrer" aria-label="View Bulk Record Upload on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <p class="project-type">Salesforce app</p>
+                        <ul class="tech-list" aria-label="Technologies"><li>Apex</li><li>LWC</li><li>Custom Metadata</li></ul>
+                        <p class="project-availability">In active development</p>
+                    </div>
+                </li>
+                <li class="project-row" data-categories="typescript web">
+                    <div class="project-summary">
+                        <h3>FocusGrid</h3>
+                        <p>Tasks sit on a grid of urgency and importance, moving as deadlines approach. When you’re deciding what to do next, Focus recommends one task and explains its choice. It also includes a timer to help you get started. Tasks stay in your browser, and the demo uses separate storage so you can try it without touching your own data.</p>
+                        <div class="project-links">
+                            <a class="text-link" href="https://github.com/gkolan/focus-grid#try-it-in-two-minutes" target="_blank" rel="noopener noreferrer" aria-label="See how to run the FocusGrid demo locally">Local demo setup <span aria-hidden="true">↗</span></a>
+                            <a class="text-link" href="https://github.com/gkolan/focus-grid" target="_blank" rel="noopener noreferrer" aria-label="View FocusGrid on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <p class="project-type">Productivity app</p>
+                        <ul class="tech-list" aria-label="Technologies"><li>TypeScript</li><li>React</li><li>Next.js</li></ul>
+                        <p class="project-availability">Local setup &amp; demo mode</p>
+                    </div>
+                </li>
+            </ul>
         </section>
 
         <footer>
@@ -217,6 +354,6 @@
             </span>
         </footer>
     </main>
-    <script src="script.js?v=20260907"></script>
+    <script src="script.js?v=20260929"></script>
 </body>
 </html>

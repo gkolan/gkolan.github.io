@@ -27,4 +27,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const toolbar = document.querySelector('.directory-toolbar');
+    const filters = document.querySelectorAll('.filter-button');
+    const projects = document.querySelectorAll('.project-row');
+    const projectCount = document.querySelector('.project-count');
+
+    function filterProjects(category) {
+        let visibleCount = 0;
+        projects.forEach((project) => {
+            const matches = category === 'all' || project.dataset.categories.split(' ').includes(category);
+            project.hidden = !matches;
+            if (matches) visibleCount++;
+        });
+
+        filters.forEach((button) => {
+            button.setAttribute('aria-pressed', String(button.dataset.filter === category));
+        });
+        projectCount.textContent = `${visibleCount} of ${projects.length} projects`;
+    }
+
+    filters.forEach((button) => {
+        button.addEventListener('click', () => filterProjects(button.dataset.filter));
+    });
+
+    filterProjects('all');
+    toolbar.hidden = false;
 });
