@@ -174,13 +174,11 @@ footer a:focus-visible {
     justify-content: space-between;
     gap: 2rem;
     margin-bottom: 2rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px dashed var(--border);
 }
 
 .section-title {
     color: var(--text-main);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
